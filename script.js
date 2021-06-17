@@ -12,7 +12,7 @@ function playAudio() {
 
     var input = document.getElementById("speech").value;
     var splitInput = input.split("");
-    splitInput.forEach(voices[splitInput].play());
+    splitInput.forEach(playVoice);
 
 }
 
