@@ -11,5 +11,6 @@ var voices = {
 function playAudio() {
 
     var input = document.getElementById("speech").value;
+    console.log(input)
     voices[input].play();
 }
