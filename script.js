@@ -17,5 +17,5 @@ function playAudio() {
 }
 
 function playVoice(item, index, arr) {
-    arr[index] = voices[item].play();
+    arr[index] = voices[item.toLowerCase()].play();
 }
