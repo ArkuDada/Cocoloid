@@ -11,6 +11,11 @@ var voices = {
 function playAudio() {
 
     var input = document.getElementById("speech").value;
-    console.log(input)
-    voices[input].play();
+    var splitInput = input.split("");
+    splitInput.forEach(voices[splitInput].play());
+
+}
+
+function playVoice(item, index, arr) {
+    arr[index] = voices[item].play();
 }
