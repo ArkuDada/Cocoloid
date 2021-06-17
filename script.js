@@ -1,6 +1,6 @@
 var voices = {
 
-    "a" : new Audio("https://raw.githubusercontent.com/ArkuDada/Cocoroid/main/test.wav")
+    "a" : new Audio("https://raw.githubusercontent.com/ArkuDada/Cocoroid/main/Asset/Voices/a.wav")
 }
 
 function playAudio() {
