@@ -13,10 +13,10 @@ function translate(arr) {
     const vowel = ["a", "i", "u", "e", "o"];
     var tempNewArr = [];
     var tempItem = "";
-    for (i = 0; i < arr.length; i++) {
-        arr[i] = arr[i].toLowerCase();
-        tempItem += arr[i].toString();
-        if (vowel.includes(arr[i])) {
+    for (var index = 0; index < arr.length; index++) {
+        arr[index] = arr[index].toLowerCase();
+        tempItem += arr[index].toString();
+        if (vowel.includes(arr[index])) {
             tempNewArr.push(tempItem);
             tempItem = "";
         }
@@ -26,9 +26,9 @@ function translate(arr) {
 
 function toSound(arr) {
     var temp = [];
-    for (i = 0; i < arr.length; i++) {
-        if (arr[i].length !== 0) {
-            temp.push(voices[arr[i]]);
+    for (var index = 0; index < arr.length; index++) {
+        if (arr[index].length !== 0) {
+            temp.push(voices[arr[index]]);
         }
     }
     return temp;
