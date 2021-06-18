@@ -1,18 +1,5 @@
 var audioSrc = "https://raw.githubusercontent.com/ArkuDada/Cocoroid/main/Asset/Voices/"
 
-var voices = {
-    "a": new Audio(audioSrc + "a.wav"),
-    "i": new Audio(audioSrc + "i.wav"),
-    "u": new Audio(audioSrc + "u.wav"),
-    "e": new Audio(audioSrc + "e.wav"),
-    "o": new Audio(audioSrc + "o.wav"),
-    "ka": new Audio(audioSrc + "ka.wav"),
-    "ki": new Audio(audioSrc + "ki.wav"),
-    "ku": new Audio(audioSrc + "ku.wav"),
-    "ke": new Audio(audioSrc + "ke.wav"),
-    "ko": new Audio(audioSrc + "ko.wav"),
-}
-
 function playAudio() {
 
     var input = document.getElementById("speech").value;
@@ -24,8 +11,8 @@ function playAudio() {
 }
 
 function translate(arr) {
-    var tempNewArr;
-    var tempItem;
+    var tempNewArr = [];
+    var tempItem = "";
     for (i = 0; i < arr.length; i++) {
         arr[i] = arr[i].toLowerCase();
         tempItem += arr[i];
@@ -69,4 +56,17 @@ function play_sound_queue(sounds) {
     }
 
     recursive_play();
+}
+
+var voices = {
+    "a": new Audio(audioSrc + "a.wav"),
+    "i": new Audio(audioSrc + "i.wav"),
+    "u": new Audio(audioSrc + "u.wav"),
+    "e": new Audio(audioSrc + "e.wav"),
+    "o": new Audio(audioSrc + "o.wav"),
+    "ka": new Audio(audioSrc + "ka.wav"),
+    "ki": new Audio(audioSrc + "ki.wav"),
+    "ku": new Audio(audioSrc + "ku.wav"),
+    "ke": new Audio(audioSrc + "ke.wav"),
+    "ko": new Audio(audioSrc + "ko.wav"),
 }
