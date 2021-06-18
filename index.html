@@ -47,17 +47,12 @@
 
     <div class="position-absolute top-50 start-50 translate-middle">
         <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <input class="form-control" type="text" id="speech">
-                </div>
-                <!-- Force next columns to break to new line at md breakpoint and up -->
-            </div>
-            <div class="row">
-                <div class="col-md-9">
-                    <button id="playButton" onclick="playAudio()" type="button" class="btn btn-primary me-3">Play Audio
-                    </button>
-                </div>
+            <div class="row g-3 mb-5">
+                <input class="form-control" type="text" id="speech">
+                <p></p>
+                <button id="playButton" onclick="playAudio()" type="button" class="btn btn-primary me-3">Play Audio
+                </button>
+
             </div>
 
         </div>
