@@ -40,6 +40,10 @@ function toSound(arr) {
     return temp;
 }
 
+function switchMode(b) {
+    document.getElementById("text-mode").setAttribute("hidden",b);
+}
+
 function play(audio, callback) {
     try {
         audio.play();

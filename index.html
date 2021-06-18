@@ -39,26 +39,32 @@
                     <img src="logo.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
                     Cocoloid WIP
                 </a>
-                <ul class="list-group list-group-horizontal">
-                    <li><a href="https://github.com/ArkuDada/Cocoloid" class="nav-link">Github's page</a></li>
-                    <li><a href="https://en.hololive.tv/terms" class="nav-link">Hololive's Fan Work Guideline</a></li>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="https://github.com/ArkuDada/Cocoloid" class="nav-link">Github's
+                        page</a></li>
+                    <li class="nav-item"><a href="https://en.hololive.tv/terms" class="nav-link">Hololive's Fan Work
+                        Guideline</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main class="container bg-light p-2 p-sm-5 mb-2 position-absolute top-50 start-50 translate-middle">
 
-            <div class="row g-3 mb-5">
-                <p class=" text-center fw-bold fs-3">Type your message in Romaji and click Play!</p>
-                <p></p>
-                <input class="form-control" type="text" id="speech" placeholder="Let's Coco read it">
-                <p></p>
-                <button id="playButton" onclick="playAudio()" type="button" class="btn btn-primary me-3" >Play!
-                </button>
-                <p></p>
-                <p class=" text-center fs-1">There is still some sound missing! ex. "kya" "ryu" </p>
-                <p class=" text-center fs-6">tl;dr you can't make it said kiryu coco , coco give us more material </p>
-            </div>
+        <div class="row g-3 mb-5" id="text-mode">
+            <p class=" text-center fw-bold fs-3">Type your message in Romaji and click Play!</p>
+            <p></p>
+            <input class="form-control" type="text" id="speech" placeholder="Let's Coco read it">
+            <p></p>
+            <button id="playButton" onclick="playAudio()" type="button" class="btn btn-primary me-3">Play!
+            </button>
+            <p></p>
+            <p class=" text-center fs-1">There is still some sound missing! ex. "kya" "ryu" </p>
+            <p class=" text-center fs-6">tl;dr you can't make it said kiryu coco , coco give us more material </p>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="switchMode(this.value)">
+            <label class="form-check-label" for="flexSwitchCheckDefault" id="switchLabel">To Buttons Mode</label>
+        </div>
     </main>
 
 </section>
