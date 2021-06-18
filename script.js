@@ -3,10 +3,10 @@ var audioSrc = "https://raw.githubusercontent.com/ArkuDada/Cocoroid/main/Asset/V
 function playAudio() {
 
     var input = document.getElementById("speech").value;
-    var splitInput = input.split("");
-    var constructInput = translate(splitInput);
-    console.log(splitInput,constructInput);
-    //play_sound_queue(splitInput);
+    var constructInput = translate(input.split(""));
+    var soundQueue = toSound(constructInput);
+    //console.log(splitInput,constructInput);
+    play_sound_queue(soundQueue);
 
 }
 
@@ -23,6 +23,14 @@ function translate(arr) {
         }
     }
     return tempNewArr;
+}
+
+function toSound(arr) {
+    var temp = [];
+    for (i = 0; i < arr.length; i++) {
+        temp.push(voices[arr[i]]);
+    }
+    return temp;
 }
 
 function checkVowel(char) {
