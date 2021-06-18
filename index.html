@@ -35,19 +35,21 @@
         <div class="container-fluid">
             <!--logo-->
             <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="logo.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
                 Cocoloid WIP
             </a>
             <ul>
-                <li><a href="https://github.com/ArkuDada/Cocoloid" class="navbar-brand">Github's page</a></li>
+                <li><a href="https://github.com/ArkuDada/Cocoloid" class="nav-link">Github's page</a></li>
             </ul>
         </div>
 
     </nav>
 
-    <div class="button_container">
-        <input type="text" id="speech">
-        <button id="playButton" onclick="playAudio()" type="button">Play Audio</button>
+    <div class="position-relative">
+        <div class="position-absolute top-0 start-0 translate-middle">
+            <input type="text" id="speech">
+            <button id="playButton" onclick="playAudio()" type="button">Play Audio</button>
+        </div>
     </div>
 
 </section>
