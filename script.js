@@ -28,19 +28,11 @@ function translate(arr) {
 function toSound(arr) {
     var temp = [];
     for (i = 0; i < arr.length; i++) {
-        temp.push(voices[arr[i]]);
-    }
-    return temp;
-}
-
-function checkVowel(char) {
-
-    for (i = 0; i < vowel.length; i++) {
-        if (vowel[i] === char) {
-            return true;
+        if (arr[i].length !== 0) {
+            temp.push(voices[arr[i]]);
         }
     }
-    return false;
+    return temp;
 }
 
 function play(audio, callback) {
