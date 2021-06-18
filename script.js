@@ -19,7 +19,7 @@ function translate(arr) {
             tempNewArr.push(tempItem);
             tempItem = "";
         } else if (arr[index] === "n") {
-            if (!vowel.includes(arr[index+1])) {
+            if (!vowel.includes(arr[index + 1])) {
                 tempNewArr.push(tempItem);
                 tempItem = "";
             }
@@ -39,10 +39,15 @@ function toSound(arr) {
 }
 
 function play(audio, callback) {
-    audio.play();
-    if (callback) {
-        audio.addEventListener('ended', callback);
+    try {
+        audio.play();
+        if (callback) {
+            audio.addEventListener('ended', callback);
+        }
+    } catch {
+        //I'm dumb
     }
+
 }
 
 function play_sound_queue(sounds) {
