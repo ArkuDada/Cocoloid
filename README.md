@@ -9,7 +9,7 @@ This is my attempt on making one!
 
 Type the message in [romanji](https://en.wikipedia.org/wiki/Romanization_of_Japanese) then press play and listen to the wise word of a dragon.
 
-*currently working with only with these sounds "a,k_,s_"
+*currently working with only with these sounds "a,k_,s_,t_,n_"
 
 #Contact
 

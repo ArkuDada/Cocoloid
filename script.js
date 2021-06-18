@@ -1,4 +1,3 @@
-
 function playAudio() {
 
     var input = document.getElementById("speech").value;
@@ -19,6 +18,11 @@ function translate(arr) {
         if (vowel.includes(arr[index])) {
             tempNewArr.push(tempItem);
             tempItem = "";
+        } else if (arr[index] === "n") {
+            if (!vowel.includes(arr[index+1])) {
+                tempNewArr.push(tempItem);
+                tempItem = "";
+            }
         }
     }
     return tempNewArr;

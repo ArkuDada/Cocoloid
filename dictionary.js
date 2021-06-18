@@ -18,7 +18,12 @@ var voices = {
     "ta": ta = new Audio(audioSrc + "ta.wav"),
     "chi": chi = new Audio(audioSrc + "chi.wav"),
     "ti" : chi,
-    "tu": tu = new Audio(audioSrc + "tu.wav"),
+    "tsu": tsu = new Audio(audioSrc + "tsu.wav"),
     "te": te =new Audio(audioSrc + "te.wav"),
     "to": to = new Audio(audioSrc + "to.wav"),
+    "na": na = new Audio(audioSrc + "na.wav"),
+    "ni": ni = new Audio(audioSrc + "ni.wav"),
+    "nu": nu = new Audio(audioSrc + "nu.wav"),
+    "ne": ne =new Audio(audioSrc + "ne.wav"),
+    "no": no = new Audio(audioSrc + "no.wav"),
 }
