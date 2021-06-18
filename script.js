@@ -41,7 +41,8 @@ function toSound(arr) {
 }
 
 function switchMode(b) {
-    document.getElementById("text-mode").setAttribute("hidden",b);
+    console.log("button mode = " + b);
+    document.getElementById("text-mode").hidden = b;
 }
 
 function play(audio, callback) {
