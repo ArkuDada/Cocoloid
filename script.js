@@ -1,24 +1,27 @@
 var audioSrc = "https://raw.githubusercontent.com/ArkuDada/Cocoroid/main/Asset/Voices/"
 
 var voices = {
-    "a" : new Audio(audioSrc +  "a.wav"),
-    "i" : new Audio(audioSrc +  "i.wav"),
-    "u" : new Audio(audioSrc +  "u.wav"),
-    "e" : new Audio(audioSrc +  "e.wav"),
-    "o" : new Audio(audioSrc +  "o.wav"),
+    "a": new Audio(audioSrc + "a.wav"),
+    "i": new Audio(audioSrc + "i.wav"),
+    "u": new Audio(audioSrc + "u.wav"),
+    "e": new Audio(audioSrc + "e.wav"),
+    "o": new Audio(audioSrc + "o.wav"),
 }
 
 function playAudio() {
 
     var input = document.getElementById("speech").value;
     var splitInput = input.split("");
+    translate(splitInput);
     console.log(splitInput);
 
 
 }
 
-function playVoice(item, index, arr) {
-    arr[index] = voices[item.toLowerCase()];
+function translate(arr) {
+    for (i = 0; i < arr.length; i++) {
+        arr[i] = voices[arr[i].toLowerCase()];
+    }
 }
 
 //This plays a file, and call a callback once it completed (if a callback is set)
