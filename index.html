@@ -48,15 +48,15 @@
     <div class="position-absolute top-50 start-50 translate-middle">
         <div class="container">
             <div class="row">
+
                 <input class="form-control" type="text" id="speech">
-            </div>
-            <div class="row">
-                <div class="d-grid">
-                    <button id="playButton" onclick="playAudio()" type="button" class="btn btn-primary me-3">Play Audio
-                    </button>
-                </div>
+                <!-- Force next columns to break to new line at md breakpoint and up -->
+                <div class="w-100 d-none d-md-block"></div>
+                <button id="playButton" onclick="playAudio()" type="button" class="btn btn-primary me-3">Play Audio
+
             </div>
         </div>
+    </div>
     </div>
 
 </section>
