@@ -9,11 +9,12 @@ This is my attempt on making one!
 
 Type the message in [romanji](https://en.wikipedia.org/wiki/Romanization_of_Japanese) then press play and listen to the wise word of a dragon.
 
-###Note
-what I still left out
+###Todo
 
+    make cuts between sound clean
     number in en/jp from soundclip 1
     long a i u e o from soundclip 2
+    
 
 #Contact
 
