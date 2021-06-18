@@ -41,7 +41,7 @@ function toSound(arr) {
 }
 
 function switchMode(b) {
-    document.getElementById("switchLabel").innerHTML = b ? "To Buttons Mode" : "To Text Mode";
+    document.getElementById("switchLabel").innerHTML = b ?  "To Text Mode" : "To Buttons Mode";
     document.getElementById("text-mode").hidden = b;
     document.getElementById("button-mode").hidden = !b;
 }
