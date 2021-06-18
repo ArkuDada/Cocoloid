@@ -1,4 +1,4 @@
-import "./dictionary";
+import "https://raw.githubusercontent.com/ArkuDada/Cocoroid/main/dictionary";
 function playAudio() {
 
     var input = document.getElementById("speech").value;
