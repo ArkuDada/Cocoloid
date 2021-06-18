@@ -1,4 +1,4 @@
-# Cocoroid
+# Cocoloid
 With the graduation announcement of the gebokawa doragon Kiryu Coco.
 
 She had provided us with some sound sample for us to create a Cocoroid , a Kiryu Coco vocaloid.
@@ -9,7 +9,7 @@ This is my attempt on making one!
 
 Type the message in [romanji](https://en.wikipedia.org/wiki/Romanization_of_Japanese) then press play and listen to the wise word of a dragon.
 
-#Note
+###Note
 what I still left out
 
     number in en/jp from soundclip 1

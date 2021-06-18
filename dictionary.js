@@ -1,4 +1,4 @@
-var audioSrc = "https://raw.githubusercontent.com/ArkuDada/Cocoroid/main/Asset/Voices/"
+var audioSrc = "https://raw.githubusercontent.com/ArkuDada/Cocoloid/main/Asset/Voices/"
 var voices = {
     "a": a = new Audio(audioSrc + "a.wav"),
     "i": i = new Audio(audioSrc + "i.wav"),
