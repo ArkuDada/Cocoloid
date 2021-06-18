@@ -32,7 +32,9 @@ function toSound(arr) {
     var temp = [];
     for (var index = 0; index < arr.length; index++) {
         if (arr[index].length !== 0) {
-            temp.push(voices[arr[index]]);
+            if (voices[arr[index]] !== undefined) {
+                temp.push(voices[arr[index]]);
+            }
         }
     }
     return temp;
