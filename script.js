@@ -6,54 +6,67 @@ var voices = {
     "u": new Audio(audioSrc + "u.wav"),
     "e": new Audio(audioSrc + "e.wav"),
     "o": new Audio(audioSrc + "o.wav"),
+    "ka": new Audio(audioSrc + "ka.wav"),
+    "ki": new Audio(audioSrc + "ki.wav"),
+    "ku": new Audio(audioSrc + "ku.wav"),
+    "ke": new Audio(audioSrc + "ke.wav"),
+    "ko": new Audio(audioSrc + "ko.wav"),
 }
 
 function playAudio() {
 
     var input = document.getElementById("speech").value;
     var splitInput = input.split("");
-    translate(splitInput);
-    console.log(splitInput);
-    play_sound_queue(splitInput);
+    var constructInput = translate(splitInput);
+    console.log(splitInput,constructInput);
+    //play_sound_queue(splitInput);
 
 }
 
 function translate(arr) {
+    var tempNewArr;
+    var tempItem;
     for (i = 0; i < arr.length; i++) {
-        arr[i] = voices[arr[i].toLowerCase()];
+        arr[i] = arr[i].toLowerCase();
+        tempItem += arr[i];
+        if (checkVowel(arr[i])) {
+            tempNewArr.push(tempItem);
+            tempItem = "";
+        }
     }
+    return tempNewArr;
 }
 
-//This plays a file, and call a callback once it completed (if a callback is set)
+function checkVowel(char) {
+    var vowel = ["a", "i", "u", "e", "o"];
+    for (i = 0; i < vowel.length; i++) {
+        if (vowel[i] === char) {
+            return true;
+        }
+    }
+    return false;
+}
 
 function play(audio, callback) {
     audio.play();
     if (callback) {
-        //When the audio object completes it's playback, call the callback
-        //provided
         audio.addEventListener('ended', callback);
     }
 }
 
-//Changed the name to better reflect the functionality
 function play_sound_queue(sounds) {
     var index = 0;
+
     function recursive_play() {
-        //If the index is the last of the table, play the sound
-        //without running a callback after
         if (index + 1 === sounds.length) {
             play(sounds[index], null);
         } else {
-            //Else, play the sound, and when the playing is complete
-            //increment index by one and play the sound in the
-            //indexth position of the array
-            play(sounds[index], function() {
+            play(sounds[index], function () {
                 index++;
                 recursive_play();
             });
         }
     }
 
-    //Call the recursive_play for the first time
     recursive_play();
 }
