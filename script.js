@@ -78,4 +78,9 @@ var voices = {
     "ku": new Audio(audioSrc + "ku.wav"),
     "ke": new Audio(audioSrc + "ke.wav"),
     "ko": new Audio(audioSrc + "ko.wav"),
+    "sa": new Audio(audioSrc + "sa.wav"),
+    "shi": new Audio(audioSrc + "shi.wav"),
+    "su": new Audio(audioSrc + "su.wav"),
+    "se": new Audio(audioSrc + "se.wav"),
+    "so": new Audio(audioSrc + "so.wav"),
 }
