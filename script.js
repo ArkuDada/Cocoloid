@@ -11,12 +11,13 @@ function playAudio() {
 }
 
 function translate(arr) {
+    const vowel = ["a", "i", "u", "e", "o"];
     var tempNewArr = [];
     var tempItem = "";
     for (i = 0; i < arr.length; i++) {
         arr[i] = arr[i].toLowerCase();
-        tempItem += arr[i];
-        if (checkVowel(arr[i])) {
+        tempItem += arr[i].toString();
+        if (vowel.includes(arr[i])) {
             tempNewArr.push(tempItem);
             tempItem = "";
         }
@@ -25,7 +26,7 @@ function translate(arr) {
 }
 
 function checkVowel(char) {
-    var vowel = ["a", "i", "u", "e", "o"];
+
     for (i = 0; i < vowel.length; i++) {
         if (vowel[i] === char) {
             return true;
