@@ -34,7 +34,7 @@ function soundButton(value) {
     var tempItem = "";
     tempItem += value;
     tempNewArr.push(tempItem);
-    var constructInput = translate(input.split(""));
+    var constructInput = translate(value.split(""));
     var soundQueue = toSound(constructInput);
     play_sound_queue(soundQueue);
 }
