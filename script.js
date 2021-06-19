@@ -28,6 +28,17 @@ function translate(arr) {
     return tempNewArr;
 }
 
+function soundButton(value) {
+    console.log(value)
+    var tempNewArr = [];
+    var tempItem = "";
+    tempItem += value;
+    tempNewArr.push(tempItem);
+    var constructInput = translate(input.split(""));
+    var soundQueue = toSound(constructInput);
+    play_sound_queue(soundQueue);
+}
+
 function toSound(arr) {
     var temp = [];
     for (var index = 0; index < arr.length; index++) {
@@ -41,7 +52,7 @@ function toSound(arr) {
 }
 
 function switchMode(b) {
-    document.getElementById("switchLabel").innerHTML = b ?  "To Text Mode" : "To Buttons Mode";
+    document.getElementById("switchLabel").innerHTML = b ? "To Text Mode" : "To Buttons Mode";
     document.getElementById("text-mode").hidden = b;
     document.getElementById("button-mode").hidden = !b;
 }

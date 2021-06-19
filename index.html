@@ -58,16 +58,28 @@
             <button id="playButton" onclick="playAudio()" type="button" class="btn btn-primary me-3">Play!
             </button>
             <p></p>
-            <p class=" text-center fs-1">There is still some sound missing! ex. "kya" "ryu" </p>
-            <p class=" text-center fs-6">tl;dr you can't make it said kiryu coco , coco give us more material </p>
+
         </div>
         <div class="row g-3 mb-5" id="button-mode" hidden>
             <p class=" text-center fw-bold fs-3">WIP</p>
-        </div>
-        <div class="form-check form-switch d-flex justify-content-center" >
-            <input class="form-check-input mx-3" type="checkbox" id="flexSwitchCheckDefault" onclick="switchMode(this.checked)">
-            <label class="form-check-label" for="flexSwitchCheckDefault" id="switchLabel">To Buttons Mode</label>
 
+            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary" onclick="this.innerHTML">a</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="this.innerHTML">i</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="this.innerHTML">e</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="this.innerHTML">o</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="this.innerHTML">u</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-check form-switch d-flex justify-content-center">
+            <p class=" text-center fs-1">There is still some sound missing! ex. "kya" "ryu" </p>
+            <p class=" text-center fs-6">tl;dr you can't make it said kiryu coco , coco give us more material </p>
+            <input class="form-check-input mx-3" type="checkbox" id="flexSwitchCheckDefault"
+                   onclick="switchMode(this.checked)">
+            <label class="form-check-label" for="flexSwitchCheckDefault" id="switchLabel">To Buttons Mode</label>
         </div>
     </main>
 
