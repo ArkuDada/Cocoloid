@@ -3,7 +3,7 @@ function playAudio() {
     let input = document.getElementById("speech").value;
     let constructInput = translate(input.split(""));
     let soundQueue = toSound(constructInput);
-    console.log(constructInput , soundQueue);
+    console.log(constructInput, soundQueue);
     play_sound_queue(soundQueue);
 
 }
@@ -57,31 +57,19 @@ function switchMode(b) {
     document.getElementById("button-mode").hidden = !b;
 }
 
-function play(audio, callback) {
-
-    const audioToPlay = audio;
-    audioToPlay.play();
-    if (callback) {
-        audioToPlay.addEventListener('ended', callback);
-    }
-
-
-}
-
-function play_sound_queue(sounds) {
+function play_sound_queue(playlist) {
     let index = 0;
+    var audio = new Audio();
 
-    function recursive_play() {
-        if (index + 1 === sounds.length) {
-            play(sounds[index], null);
-        } else {
-            play(sounds[index], function () {
-                index++;
-                recursive_play();
-            });
-        }
-    }
+    audio.addEventListener('ended', function () {
+        index = ++index < playlist.length ? index : 0;
+        console.log(index)
+        audio.src = playlist[index];
+        audio.play();
+    }, true);
+    audio.loop = false;
+    audio.src = playlist[0];
+    audio.play();
 
-    recursive_play();
 }
 
