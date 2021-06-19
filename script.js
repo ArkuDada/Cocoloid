@@ -1,8 +1,8 @@
 function playAudio() {
 
-    var input = document.getElementById("speech").value;
-    var constructInput = translate(input.split(""));
-    var soundQueue = toSound(constructInput);
+    let input = document.getElementById("speech").value;
+    let constructInput = translate(input.split(""));
+    let soundQueue = toSound(constructInput);
     console.log(constructInput , soundQueue);
     play_sound_queue(soundQueue);
 
@@ -10,9 +10,9 @@ function playAudio() {
 
 function translate(arr) {
     const vowel = ["a", "i", "u", "e", "o"];
-    var tempNewArr = [];
-    var tempItem = "";
-    for (var index = 0; index < arr.length; index++) {
+    let tempNewArr = [];
+    let tempItem = "";
+    for (let index = 0; index < arr.length; index++) {
         arr[index] = arr[index].toLowerCase();
         tempItem += arr[index].toString();
         if (vowel.includes(arr[index])) {
@@ -30,18 +30,18 @@ function translate(arr) {
 
 function soundButton(value) {
     console.log(value)
-    var tempNewArr = [];
-    var tempItem = "";
+    let tempNewArr = [];
+    let tempItem = "";
     tempItem += value;
     tempNewArr.push(tempItem);
-    var constructInput = translate(value.split(""));
-    var soundQueue = toSound(constructInput);
+    let constructInput = translate(value.split(""));
+    let soundQueue = toSound(constructInput);
     play_sound_queue(soundQueue);
 }
 
 function toSound(arr) {
-    var temp = [];
-    for (var index = 0; index < arr.length; index++) {
+    let temp = [];
+    for (let index = 0; index < arr.length; index++) {
         if (arr[index].length !== 0) {
             if (voices[arr[index]] !== undefined) {
                 temp.push(voices[arr[index]]);
@@ -59,16 +59,17 @@ function switchMode(b) {
 
 function play(audio, callback) {
 
-    audio.play();
+    const audioToPlay = audio;
+    audioToPlay.play();
     if (callback) {
-        audio.addEventListener('ended', callback);
+        audioToPlay.addEventListener('ended', callback);
     }
 
 
 }
 
 function play_sound_queue(sounds) {
-    var index = 0;
+    let index = 0;
 
     function recursive_play() {
         if (index + 1 === sounds.length) {
