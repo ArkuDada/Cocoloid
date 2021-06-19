@@ -62,14 +62,15 @@ function play_sound_queue(playlist) {
     let audio = new Audio();
 
     audio.addEventListener('ended', function () {
-        index = ++index < playlist.length ? index : 0;
+        index = ++index < playlist.length ? index : -1;
+        if (index === -1){return}
         console.log(index)
-        audio.src = playlist[index].src;
+        audio.src = playlist[index];
         audio.play();
     }, true);
     audio.volume = 0.3;
     audio.loop = false;
-    audio.src = playlist[0].src;
+    audio.src = playlist[0];
     audio.play();
 
 }
