@@ -58,14 +58,12 @@ function switchMode(b) {
 }
 
 function play(audio, callback) {
-    try {
-        audio.play();
-        if (callback) {
-            audio.addEventListener('ended', callback);
-        }
-    } catch {
-        //I'm dumb
+
+    audio.play();
+    if (callback) {
+        audio.addEventListener('ended', callback);
     }
+
 
 }
 
