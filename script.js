@@ -3,7 +3,7 @@ function playAudio() {
     var input = document.getElementById("speech").value;
     var constructInput = translate(input.split(""));
     var soundQueue = toSound(constructInput);
-    console.log(constructInput);
+    console.log(constructInput , soundQueue);
     play_sound_queue(soundQueue);
 
 }
