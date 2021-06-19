@@ -59,16 +59,17 @@ function switchMode(b) {
 
 function play_sound_queue(playlist) {
     let index = 0;
-    var audio = new Audio();
+    let audio = new Audio();
 
     audio.addEventListener('ended', function () {
         index = ++index < playlist.length ? index : 0;
         console.log(index)
-        audio.src = playlist[index];
+        audio.src = playlist[index].src;
         audio.play();
     }, true);
+    audio.volume = 0.3;
     audio.loop = false;
-    audio.src = playlist[0];
+    audio.src = playlist[0].src;
     audio.play();
 
 }
